@@ -6,6 +6,7 @@ regex = '''
   (?P<minor>\d+)
   \.
   (?P<patch>\d+)
+  ((?P<release>.*)(?P<build>\d+))?
 '''
 
 [git]
