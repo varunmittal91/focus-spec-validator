@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "focus-spec-validator"
-version = "0.5.8"
+version = "0.5.8-rc0"
 description = "FOCUS spec validator."
 authors = []
 readme = "README.md"
