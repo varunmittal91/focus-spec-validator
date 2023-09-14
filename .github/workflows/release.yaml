@@ -3,10 +3,10 @@ on:
   create:
     tags:
       - 'v*'
-#  workflow_run:
-#    workflows: [ "Unittest" ]
-#    types:
-#      - completed
+  workflow_run:
+    workflows: [ "Unittest" ]
+    types:
+      - completed
 
 jobs:
   publish:
