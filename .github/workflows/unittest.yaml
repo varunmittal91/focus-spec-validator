@@ -6,6 +6,7 @@ on:
       - main
       - dev
       - issue/**
+      - init-build
   pull_request:
     branches:
       - main

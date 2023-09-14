@@ -4,7 +4,7 @@ on:
     types:
       - created
   workflow_run:
-    workflows: [ "unittest", "Validate Focus Data" ]
+    workflows: [ "Unittest" ]
     types:
       - completed
 
