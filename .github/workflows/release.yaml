@@ -1,12 +1,12 @@
 name: Release
 on:
-  release:
-    types:
-      - created
-  workflow_run:
-    workflows: [ "Unittest" ]
-    types:
-      - completed
+  push:
+    tags:
+      - 'v*'
+#  workflow_run:
+#    workflows: [ "Unittest" ]
+#    types:
+#      - completed
 
 jobs:
   publish:
@@ -22,6 +22,14 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
+
+      - name: Create a Release
+        uses: elgohr/Github-Release-Action@v4
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
+        with:
+          title: MyReleaseMessage
+
       - name: Install poetry
         uses: abatilo/actions-poetry@v2
 
