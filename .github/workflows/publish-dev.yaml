@@ -17,6 +17,11 @@ jobs:
           echo "Current github.event: ${{ github.event.ref }}"
           echo "ahha: $GITHUB_REF"
           export
+          tag=${{  github.ref_name }}
+          branch=$(git branch --contains=$tag |\
+          	head -n1 |\
+          	cut -c3-)
+          echo $branch
       - uses: actions/checkout@v3
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4

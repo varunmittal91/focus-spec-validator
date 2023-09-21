@@ -3,6 +3,7 @@ on:
   create:
     tags:
       - 'v\d\.\d\.\d'
+      - 'v\d\.\d\.\d-(dev|rc)\d'
 
 jobs:
   publish:
