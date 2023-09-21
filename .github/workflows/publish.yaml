@@ -7,9 +7,9 @@ on:
 
 jobs:
   publish:
-    if: >
-          (github.ref == 'refs/heads/main' && contains(github.event.ref, 'refs/tags/v\d\.\d\.\d')) ||
-          (github.ref == 'refs/heads/dev' && contains(github.event.ref, 'refs/tags/v\d\.\d\.\d-(dev|rc)\d'))
+#    if: >
+#          (github.ref == 'refs/heads/main' && contains(github.event.ref, 'refs/tags/v\d\.\d\.\d')) ||
+#          (github.ref == 'refs/heads/dev' && contains(github.event.ref, 'refs/tags/v\d\.\d\.\d-(dev|rc)\d'))
     permissions:
       id-token: write
       contents: read
