@@ -1,12 +1,12 @@
-name: Publish
+name: Publish dev
 on:
   create:
     tags:
-      - 'v\d\.\d\.\d'
+      - 'v\d\.\d\.\d-(dev|rc)\d'
 
 jobs:
   publish:
-    if: github.ref == 'refs/heads/main
+    if: github.ref == 'refs/heads/dev'
     permissions:
       id-token: write
     runs-on: ubuntu-latest
