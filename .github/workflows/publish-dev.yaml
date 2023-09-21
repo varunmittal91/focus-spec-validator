@@ -11,6 +11,7 @@ jobs:
       id-token: write
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: Print github.ref
         run: |
           echo "Current github.ref: ${{ github.ref }}"
@@ -22,7 +23,6 @@ jobs:
           	head -n1 |\
           	cut -c3-)
           echo $branch
-      - uses: actions/checkout@v3
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
         with:
