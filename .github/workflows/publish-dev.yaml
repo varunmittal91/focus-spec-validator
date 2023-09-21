@@ -1,5 +1,9 @@
 name: Publish dev
 on:
+  push:
+    branches:
+      - main
+      - dev
   create:
     tags:
       - 'v\d\.\d\.\d-(dev|rc)\d'
