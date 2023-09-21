@@ -2,8 +2,8 @@ name: Publish dev
 on:
   push:
     branches:
-      - main
-      - dev
+      - maina
+      - deva
   create:
     tags:
       - 'v\d\.\d\.\d-(dev|rc)\d'
