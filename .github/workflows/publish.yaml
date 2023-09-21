@@ -17,7 +17,7 @@ jobs:
       - name: Print github.ref
         run: |
           echo "Current github.ref: ${{ github.ref }}"
-          echo "Current github.event: ${{ github.event }}"
+          echo "Current github.event: ${{ github.event.ref }}"
       - uses: actions/checkout@v3
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v4
